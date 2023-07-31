@@ -1,3 +1,5 @@
 # bookstore_assesment
 
-#Start app : npm start.
+1. **config pg** in ./server env file
+2. **Start app**: npm start.
+
