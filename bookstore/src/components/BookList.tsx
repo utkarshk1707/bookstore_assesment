@@ -5,21 +5,8 @@ import { Book } from '../types/books';
 
 
 const BookList: React.FC = () => {
-  const [books, setBooks] = useState<Book[]>([{
-    tags: 'string',
-        title: 'string',
-        description: 'string',
-        discountRate: 10,
-        coverImage: 'https://images-na.ssl-images-amazon.com/images/I/51Ga5GuElyL._AC_SX184_.jpg',
-        price: 10,
-  }, {
-    tags: 'string',
-        title: 'string',
-        description: 'string',
-        discountRate: 10,
-        coverImage: 'https://images-na.ssl-images-amazon.com/images/I/51Ga5GuElyL._AC_SX184_.jpg',
-        price: 10,
-  }]);
+  const [books, setBooks] = useState<Book[]>();
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,12 +22,38 @@ const BookList: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-wrap gap-4 justify-center">
-    {books.map((book) => (
+    <div className="grid grid-cols-2 align-center lg:grid-cols-10 gap-2">
+    {books?.length ? books.map((book) => (
       <BookCard key={book.title} book={book} />
-    ))}
+    )): <></>}
   </div>
   );
 };
 
 export default BookList;
+
+// constant books data
+
+// [{
+//   tags: 'string',
+//       title: 'string',
+//       description: 'string',
+//       discountRate: 10,
+//       coverImage: 'https://images-na.ssl-images-amazon.com/images/I/51Ga5GuElyL._AC_SX184_.jpg',
+//       price: 10000,
+// }, {
+//   tags: 'string',
+//       title: 'string',
+//       description: 'string',
+//       discountRate: 10,
+//       coverImage: 'https://images-na.ssl-images-amazon.com/images/I/51Ga5GuElyL._AC_SX184_.jpg',
+//       price: 10,
+// },
+// {
+//   tags: 'string',
+//       title: 'string',
+//       description: 'string',
+//       discountRate: 10,
+//       coverImage: 'https://images-na.ssl-images-amazon.com/images/I/51Ga5GuElyL._AC_SX184_.jpg',
+//       price: 10,
+// }]

@@ -1,12 +1,14 @@
 import React from 'react';
 import 'tailwindcss/tailwind.css';
+import './index.css'; 
+
 
 import BookList from './components/BookList';
 
-function App() {
+const App =()=> {
   return (
-    <div className="p-4">
-      <h1 className="text-3xl font-bold mb-4">Book Collection</h1>
+    <div>
+      <h1 className="my-2 text-center capitalize text-4xl">Books</h1>
       <BookList />
     </div>
   );

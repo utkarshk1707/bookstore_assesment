@@ -2,17 +2,18 @@ import React from 'react';
 import { BookCardProps } from '../types/bookList';
 
 const BookCard: React.FC<BookCardProps> = ({ book }) => {
-  return (
-    <div className="card bg-white rounded-lg shadow-md p-4">
-    <img src={book.coverImage} alt={book.title} className="card-image w-full object-contain rounded-md mb-4" />
-    <div className="card-content">
-      <h2 className="card-title text-xl font-semibold mb-2">{book.title}</h2>
-      <p className="card-description text-gray-600 mb-4">{book.description}</p>
-      <p className="card-discount text-green-600 font-semibold mb-2">Discount: {book.discountRate}%</p>
-      <p className="card-price text-blue-600 font-semibold">Price: ${book.price}</p>
-    </div>
-  </div>
-  );
+    return (
+        <div className="flex flex-col items-center max-w-sm bg-white">
+            <img className="w-187 h-187 text-center" src={book.coverImage} alt={book.title} />
+            <div className="px-2 py-4 w-full">
+                <div className="text-xl text-left mb-2">{book.title}</div>
+                <div className="flex flex-wrap w-full justify-between text-bold">
+                    <div className="text-14"> {`${book.discountRate}%`}</div>
+                    <div className="text-16">{`$${book?.price?.toLocaleString() || '-'}`}</div>
+                </div>
+            </div>
+        </div>
+    );
 };
 
 export default BookCard;

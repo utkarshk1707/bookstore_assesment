@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
-    "start:frontend": "cd bookstore && npm start",
-    "start:backend": "cd server && npm start"
+    "start:frontend": "cd bookstore && npm i && npm start",
+    "start:backend": "cd server && npm i && npm start"
   },
   "keywords": [],
   "author": "",
