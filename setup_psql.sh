@@ -26,10 +26,10 @@ echo "CREATE TABLE books (
 
 echo "INSERT INTO books (title, writer, cover_image, point, discount, tags)
   VALUES
-    ('Book 1', 'Author 1', 'https://example.com/book1.jpg', 100, 0.1, 'fiction'),
-    ('Book 2', 'Author 2', 'https://example.com/book2.jpg', 150, 0.2, 'non-fiction'),
-    ('Book 3', 'Author 3', 'https://example.com/book3.jpg', 200, 0.15, 'science'),
-    ('Book 4', 'Author 4', 'https://example.com/book4.jpg', 120, 0.05, 'essay');" | psql bookstore_assesment
+    ('Book 1', 'Author 1', 'https://images-na.ssl-images-amazon.com/images/I/51Ga5GuElyL._AC_SX184_.jpg', 100, 0.1, 'fiction'),
+    ('Book 2', 'Author 2', 'https://images-na.ssl-images-amazon.com/images/I/51Ga5GuElyL._AC_SX184_.jpg', 150, 0.2, 'non-fiction'),
+    ('Book 3', 'Author 3', 'https://images-na.ssl-images-amazon.com/images/I/51Ga5GuElyL._AC_SX184_.jpg', 200, 0.15, 'science'),
+    ('Book 4', 'Author 4', 'https://images-na.ssl-images-amazon.com/images/I/51Ga5GuElyL._AC_SX184_.jpg', 120, 0.05, 'essay');" | psql bookstore_assesment
 
 # Exit from PostgreSQL
 \q
