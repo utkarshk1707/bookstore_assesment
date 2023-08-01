@@ -13,7 +13,6 @@ const BookList: React.FC = () => {
       try {
         const response = await axios.get<Book[]>('/books');
         if(response.data) setBooks(response.data);
-        console.log(response.data)
       } catch (error) {
         console.error('Error fetching books:', error);
       }

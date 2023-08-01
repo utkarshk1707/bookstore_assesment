@@ -2,7 +2,7 @@ export interface Book{
         tags: string;
         title: string;
         description: string;
-        discountRate: number;  
+        discount: number;  
         coverImage: string;
         price: number;
 }

@@ -13,6 +13,9 @@ module.exports = {
       height: {
         '187': '187px',
       },
+      colors: {
+        customRed: '#FF003E',
+      }
     },
   },
   plugins: [],
